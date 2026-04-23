@@ -7,7 +7,8 @@ It generates daily:
 - maximum temperature (TMAX)
 - minimum temperature (TMIN)
 
-# What HWGEN_main_GUI.exe does (CONTACT EUNJIN.HAN@USDA.GOV FOR SOURCE CODE):
+# What HWGEN_main_GUI.exe does:
+- CONTACT EUNJIN.HAN@USDA.GOV FOR SOURCE CODE
 - seasonal forecast conditioning (IRI tercile probabilities)
 - stochastic weather generation
 - monthly low-frequency correction
