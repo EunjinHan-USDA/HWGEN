@@ -112,7 +112,7 @@ def main() -> None:
     tbase = 4.4
     topt = 24.4
 
-    main_dir = path.join(PROJECT_ROOT, "HWGEN_out")
+    main_dir = path.join(PROJECT_ROOT, "dist", "HWGEN_out")
 
     daymet_path = path.join(PROJECT_ROOT, "data", "Daymet")
     obs_fname = path.join(daymet_path, f"daymet_{SITE_DICT[wsta]}.csv")
@@ -123,9 +123,9 @@ def main() -> None:
     df_obs_gdd = compute_gdd(df_obs, tbase, topt)
 
     march_daily = df_obs_gdd[df_obs_gdd["MONTH"] == 3].groupby("day_count")["GDD"].mean()
-    print("March AVG GDD in climatology")
-    print("minmum = ", np.min(march_daily.values))
-    print("maximum = ", np.max(march_daily.values))
+    # print("March AVG GDD in climatology")
+    # print("minmum = ", np.min(march_daily.values))
+    # print("maximum = ", np.max(march_daily.values))
 
     obs_year_df = df_obs_gdd[df_obs_gdd["season_year"] == plot_year].reset_index(drop=True)
     clim_quantile = gdd_quantiles(df_obs_gdd)
@@ -136,7 +136,6 @@ def main() -> None:
         f"{wsta}_{trimester1}",
         f"HWGEN_season_corr_out_{target_scf_year}.csv",
     )
-    print(gen_fname)
 
     df_gen = pd.read_csv(gen_fname)[["iyear", "YEAR", "DOY", "TMAX", "TMIN"]]
     df_gen = df_gen.astype({"iyear": int, "YEAR": int, "DOY": int})
@@ -209,9 +208,8 @@ def main() -> None:
         f"{wsta}_{trimester1}",
         f"GDD_forecasts_{wsta}_{target_scf_year}_{trimester1}.png",
     )
-    plt.savefig(fig_name)
     plt.show()
-
+    plt.savefig(fig_name)
 
 if __name__ == "__main__":
     main()
