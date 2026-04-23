@@ -15,6 +15,30 @@ It generates daily:
 - seasonal bias correction using theoretical CDF matching
 - Final output (synthetic daily weater) file is HWGEN_season_corr_out_####.csv under the output folder (e.g.,"...dist\HWGEN_out\AL02_2021\AL02_DJF")
 
+# Instruction for HWGEN_main_GUI.exe:
+Here are the steps to follow:
+
+1.  **Select the station ID.** (Currently, only two example stations are available: AL02 and WA02.)
+2.  **Select the Daymet long-term observed weather data** by browsing to `~/data/Daymet/daymet_AL_EVSmith.csv`.
+3.  **Enter the target year.** (Default: 2021)
+4.  **Select a target trimester** for the coming seasonal climate forecast.
+5.  **Enter the `SCF issued month`.** This month should precede the target trimester's first month by one month (e.g., an SCF issued in September is for the OND trimester).
+6.  **Browse to and select the precipitation and temperature tercile forecasts** with 1- and 4-month lead time (located in `~/data/IRI_SCF/`).
+7.  **Enter `nsample`** (the number of years sampled for parameter estimation).
+8.  **Enter `year2_flag`:**
+    *   `0` means generating weather realizations for only 1 year.
+    *   `1` means generating for 2 years because the growing season might extend beyond the end of the first year.
+9.  **Enter `nrealz`** (the number of weather realizations to generate).
+10. **Click the `Run` button** at the bottom. The process may take more than 10 minutes to complete, depending on your computer's specifications. A command prompt window (or terminal) will open in the background to display the progress.
+
+---
+
+**Output Files:**
+
+*   The final output file, containing synthetic daily weather data, will be named `HWGEN_season_corr_out_####.csv` and located in the output folder (e.g., `...dist/HWGEN_out/AL02_2021/AL02_DJF`).
+*   To compute Growing Degree Days (GDD) based on the generated weather data, run `compute_GDD_daymet_AL_DJF_2021.py`.
+
+---
 The workflow combines:
 - seasonal forecast probabilities (IRI SCF),
 - historical daily weather observations (Daymet),
