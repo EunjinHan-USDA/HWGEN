@@ -19,7 +19,7 @@ It generates daily:
 Here are the steps to follow:
 
 1.  **Select the station ID.** (Currently, only two example stations are available: AL02 and WA02.)
-2.  **Select the Daymet long-term observed weather data** by browsing to `~/data/Daymet/daymet_AL_EVSmith.csv`.
+2.  **Select the Daymet long-term observed weather data** by browsing to `~/data/Daymet`.
 3.  **Enter the target year.** (Default: 2021)
 4.  **Select a target trimester** for the coming seasonal climate forecast.
 5.  **Enter the `SCF issued month`.** This month should precede the target trimester's first month by one month (e.g., an SCF issued in September is for the OND trimester).
@@ -31,7 +31,6 @@ Here are the steps to follow:
 9.  **Enter `nrealz`** (the number of weather realizations to generate).
 10. **Click the `Run` button** at the bottom. The process may take more than 10 minutes to complete, depending on your computer's specifications. A command prompt window (or terminal) will open in the background to display the progress.
 
----
 
 **Output Files:**
 
