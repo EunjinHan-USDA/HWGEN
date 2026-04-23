@@ -132,5 +132,4 @@ Example output files include:
 ## Notes
 
 - Paths in the current analysis script are repository-relative for portability.
-- The script expects prior HWGEN output files to already exist in `dist/HWGEN_out/...`.
 - If you package this as a reusable module, move hard-coded parameters to a config file or command-line arguments.
