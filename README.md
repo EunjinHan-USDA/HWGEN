@@ -12,6 +12,7 @@ It generates daily:
 - stochastic weather generation
 - monthly low-frequency correction
 - seasonal bias correction using theoretical CDF matching
+- Final output (synthetic daily weater) file is HWGEN_season_corr_out_####.csv under the output folder (e.g.,"...dist\HWGEN_out\AL02_2021\AL02_DJF")
 
 The workflow combines:
 - seasonal forecast probabilities (IRI SCF),
