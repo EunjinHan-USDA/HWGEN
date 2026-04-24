@@ -8,12 +8,12 @@ It generates daily:
 - minimum temperature (TMIN)
 
 # What HWGEN_main_GUI.exe does:
-- CONTACT EUNJIN.HAN@USDA.GOV FOR SOURCE CODE
 - seasonal forecast conditioning (IRI tercile probabilities)
 - stochastic weather generation
 - monthly low-frequency correction
 - seasonal bias correction using theoretical CDF matching
 - Final output (synthetic daily weater) file is HWGEN_season_corr_out_####.csv under the output folder (e.g.,"...dist\HWGEN_out\AL02_2021\AL02_DJF")
+- For questions, please contact Eunjin Han (eunjin.han@usda.gov)
 
 # Instruction for HWGEN_main_GUI.exe:
 Here are the steps to follow:
